@@ -1,0 +1,18 @@
+{Manifest,
+ [
+ {ManifestVersion, '1.0'}
+ {NodeName,'the name of the node'},
+ {SupportingOrganization,[{name,'name of the organization that supports the node'},
+    {contactEmail,'nodemanager@supportingorg.org'}]},
+ {Description,'Description of node scope, is there any topical focus, group of contributors, other special characteristics of capabilities offered'},
+ {NodeType,'term from this list: filesOnly, catalog, dataService, catalogAndDataService'}
+ {CatalogService,['serviceID1', 'serviceID2',...]}, //array containing a list of identifiers for catalog service profiles offered. Use identifier string that is included in the protocol element of the CI_OnlineResource element in metadata.
+ {DataService,['serviceID1', 'serviceID2',...]}, //array containing a list of identifiers for data service profiles offered. Use identifier string that is included in the protocol element of the CI_OnlineResource element in metadata.
+ {SearchURL,['http://search.geothermaldata.org/','url2', ... ]}, //list of URLs for web sites that allow a human user to search resources offered by this node. Included URL is search end point for NGDS aggregator; all NGDS nodes should be searchable from that web site.
+ {OpenSearchURL,['url1', 'url2',...]}, //list of URLs that get openSearch Description documents for services that allow machine-actionable searching of content from this node
+ {Notifications,[{{protocol,'rss'},{url,'http://somehost.org/nodefeed'}},
+    {{protocol,'twitter'},{url,'http://somehost.org/twitterfeed'}, 
+    {{protocol,'listserv'},{url,'http://somehost.org/nodeList'}...] //list of tuples specifiying a feed protocol and the URL to subscribe to the feed. The notification service will push information about service maintenance, down time, service sunsetting, node sunsetting, etc.
+]}
+ 
+    
