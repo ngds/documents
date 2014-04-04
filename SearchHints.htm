@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>SearchHints</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<base href='file:\\\E:\GitHub\NGDS\documents\'/>
+</head>
+<body>
+<h2>Library - Quick Start Search tips</h2>
+<ul>
+<li>Simply enter a word or words in the box and click on Search to conduct a free text search</li>
+<li>By default, there is an &quot;OR&quot; relationship between the words in a free text search</li>
+<li>Enclose a word or phrase in double quotes “xxxxx” to find the exact  word or phrase. For example, &quot;water temperature&quot;</li>
+<li>To search only a specific metadata field, precede the search term(s) with the field name and a colon. For example, title:&quot;temperature profile&quot;</li>
+</ul>
+<h2>Search Terms</h2>
+<p>A query is broken up into terms and operators. There are two types of terms: Single Terms and Phrases. A Single Term is a single word such as air or quality. A Phrase is a group of words surrounded by double quotes such as &quot;air quality&quot;. Multiple terms can be combined together with Boolean operators to form a more complex query. </p>
+<p><strong><em>Examples:</em></strong></p>
+<ul>
+<li>Searching for <strong>air</strong> could result in 35 hits (items contain the word air)</li>
+<li>Searching for <strong>quality</strong> results in 123 hits (items contain the word quality)</li>
+<li>Searching for <strong>air quality</strong> (without quotes) results in 148 hits (items contain the words air or quality or both)</li>
+<li>Searching for <strong>air AND quality</strong> results in 10 hits (results contain both words air and quality)</li>
+<li>Searching for <strong>&quot;air quality&quot;</strong> (with quotes) results in 7 hits (items contain the words air and quality directly after each other)</li>
+<li>Searching for <strong>title:air</strong> results in 5 hits (items contain the word air in the title)</li>
+<li>Searching for <strong>title:quality</strong> results in 14 hits (items contain the word quality in the title)</li>
+<li>Searching for <strong>+title:air +title:quality</strong> or <strong>title:&quot;air quality&quot;</strong> results in 2 hits (both items contain both words air and quality in the title)</li>
+</ul>
+<p><strong><em>Special Characters</em></strong></p>
+<p>The Geoportal Server supports escaping special characters that are part of the query syntax. The current list special characters are: </p>
+<pre><code> + - &amp;&amp; || ! ( ) { } [ ] ^ &quot; ~ * ? : \
+</code></pre>
+
+<p>To escape these character use a backslash character '\' before the special character. For example to search for items that contain the scale  <strong>1:250k</strong> use the query: <strong>1\:250k</strong>.</p>
+<p><strong><em>Wildcard Searches</em></strong></p>
+<p>The Geoportal Server supports single and multiple character wildcard searches within single terms (not within phrase queries).</p>
+<p>Caution: You cannot use a * or ? symbol as the first character of a search.</p>
+<ul>
+<li>To perform a single character wildcard search use the question mark character '?'. The single character wildcard search looks for terms that match that with the single character replaced. For example, to search for <strong>'well' or 'wells'</strong> you can use the search: <strong>well?</strong></li>
+<li>To perform a multiple character wildcard search use the asterisk  '*' character. Multiple character wildcard searches look for 0 or more characters. For example, to search for <strong>'test', 'tests' or 'tester'</strong>, you can use the search: <strong>test*</strong> . </li>
+<li>You can also use the wildcard searches in the middle of a term as for <strong>'text' or 'test'</strong>: <strong>te?t</strong></li>
+</ul>
+<p><strong><em>Proximity Searches</em></strong>
+The Geoportal Server supports finding words are a within a specific distance away. To make a proximity search use the tilde character '~' at the end of a Phrase. For example to search for <strong>air</strong> and <strong>quality</strong> within 10 words of each other in a document use the search: <strong>air quality~10</strong></p>
+<p><strong><em>Boosting a Term</em></strong>
+The Geoportal Server provides the relevance level of matching documents based on the terms found. To boost a term use the caret character '^' with a boost factor (a number) at the end of the term you are searching. The higher the boost factor, the more relevant the term will be. Boosting allows you to control the relevance of a document by boosting its term. </p>
+<p>For example, if you are searching for <strong>air quality</strong> and you want the term <strong>air</strong> to be more relevant, boost it using the ^ symbol along with the boost factor next to the term. You would type: <strong>air^4 quality</strong>. This will make documents with the term air appear more relevant. </p>
+<p>You can also boost Phrase Terms as in the example: <strong>&quot;air quality&quot;^4 &quot;water quality&quot;</strong>. By default, the boost factor is 1. Although the boost factor must be positive, it can be less than 1 (e.g. 0.2)</p>
+<p><strong><em>Boolean Operators</em></strong>
+Boolean operators allow terms to be combined through logic operators. The Geoportal Server supports <strong>AND, +, OR, NOT</strong> and <strong>-</strong> as Boolean operators.</p>
+<p><em>Note:  Boolean operators must be ALL CAPS</em></p>
+<ul>
+<li>The OR operator is the default conjunction operator. This means that if there is no Boolean operator between two terms, the OR operator is used. The OR operator links two terms and finds a matching document if either of the terms exist in a document. This is equivalent to a union using sets. The symbol || can be used in place of the word OR.</li>
+<li>The AND operator matches documents where both terms exist anywhere in the text of a single document. This is equivalent to an intersection using sets. The symbol &amp;&amp; can be used in place of the word AND.</li>
+<li>The + or required operator requires that the term after the + symbol exist somewhere in a field of a single document.</li>
+<li>The NOT operator excludes documents that contain the term after NOT. This is equivalent to a difference using sets. The symbol '!' can be used in place of the word NOT. <em>Note: The NOT operator cannot be used with just one term.</em></li>
+</ul>
+<p><strong><em>Grouping</em></strong>
+The Geoportal Server supports using parentheses to group clauses to form sub queries. This can be very useful if you want to control the boolean logic for a query. For example: <strong>(air OR water) AND quality</strong> will find documents containing the words air or water and the word quality.</p>
+<p><strong><em>Field Grouping</em></strong>
+The Geoportal Server supports using parentheses to group multiple clauses to a single field. For example: title:(air OR water) finds items that contain the words air or water in the title.</p>
+<p> </p>
+<h2>Map - Quick Start Search tips</h2>
+<ul>
+<li>You may search for data whose spatial extent lies anywhere in the world, intersects with the displayed map area, or falls entirely within the displayed map area.</li>
+<li>Click-and-drag on the map to center it, then double-click or use the scroll wheel on the mouse to zoom in and out to set your region of interest, and/or use the '+' or '-'  zoom tools in the upper left corner of the map.</li>
+<li>You can also draw a bounding box around the area of interest using the ‘pencil’ tool in the upper left corner of the map. Click on the tool then at one corner of the intended box, drag while holding the mouse button down. Release mouse button to complete the box. The map will auto zoom to that chosen area. Results will display over the map or click on Arrow bar on the right side of the screen to open display.</li>
+<li>You can reset the extent using the ‘world’ icon in the upper left corner of the map.</li>
+<li>The bottom layers icon can be used to turn on or off the results displayed on the screen by checking/unchecking the Search Results box.</li>
+<li>You can also enter search terms in the Search: box to narrow your search within the map extent by typing in the search term and hitting Enter on your keyboard. </li>
+</ul>
+<p>For more information on how to specifically leverage Lucene search syntax for powerful searching in your Geoportal, please see the <a href="http://lucene.apache.org/core/2_9_4/queryparsersyntax.html">Lucene website</a>.</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
