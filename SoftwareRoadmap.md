@@ -5,6 +5,8 @@ NGDS requires software to support a variety of functions. This document is for b
 
 ### Registry
 1. create and manage metadata documenting the information resources under the stewardship of the organization
+2. metadata in the registry should be available for harvesting into catalogs through various interfaces; at least WAF and CSW
+3. We are using USGIN ISO metadata profile.
 
 ### Repository
 1. Provide a repository for long term preservation of digital information and work products associated with projects.
@@ -16,9 +18,18 @@ NGDS requires software to support a variety of functions. This document is for b
 1. Harvest metadata for selected resources into the catalog
 1. Provide user friendly search interface with Map-oriented search, and a text-and-facet oriented search.
 
+### Data Access
+1. Users want to be able to download data in convienient formats (csv, .shp, gml, GeoJSON)
+2. Download should work across multiple services if they are interoperable
+
 ### Installable node
+1. For beginning system participation, barrier to entry should be low, so we want to provide an installable software package to implement basic metadata creation and publication for harvest, file repository, and data service deployment.
 
 ### Federated information system operation
+1. need to be able to notify aggregators of publishers that would like to be harvested
+2. need registry of information exchange specifications, vocabularies, system nodes...
+3. URI dereferencing for identifiers
+3. notification and issue tracking, user feedback
 
 The tools should be easy to use, standards-based, and free-open source. Software enabling these capabilities should be available in a package with a simple install procedure.
 
