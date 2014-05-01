@@ -1,7 +1,9 @@
-# A registry-repository-catalog system:
+# NGDS Software brainstorming
+
+NGDS requires software to support a variety of functions. This document is for brainstorming requirements/use scenarios. The [Enterprise view](enterprise-view) focuses on domain operations (attempt to be independent of software). The [Functional View](#functional-view) section decomposes the operations into units that can be implemented in software components.
+
 
 ## Enterprise view
-NGDS requires software to support a variety of functions. This document is for brainstorming requirements/use scenarios. The Enterprise view focuses on domain operations (attempt to be independent of software). The [Functional View](#functional-view) section decomposes the operations into units that can be implemented in software components.
 
 ### Registry
 1. create and manage metadata documenting the information resources under the stewardship of the organization
@@ -56,5 +58,10 @@ The tools should be easy to use, standards-based, and free-open source. Software
 * harvest ISO, FGDC, DC from CSW into repository
     * validation, accept flawed records for update, fixing
 
-NGDS has chosen to work with the CKAN platform for enabling these capabilities. Version 1 of the 
+# Software landscape
+Some open source projects we should be aware of:
+
+NGDS has chosen to work with the CKAN platform for enabling these capabilities. Version 1 of the NIAB implements a basic suit of the necessary capabilities.  Other CKAN branches like data.gov include functionality that we want to include in our build. 
+
+GeoNode, GeoNetwork, OpenGeoPortal, ESRI Geoportal  All implement various aspects of the functionality we need.
 
