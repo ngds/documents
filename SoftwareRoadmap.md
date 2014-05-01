@@ -1,7 +1,7 @@
 # A registry-repository-catalog system:
 
 ## Enterprise view
-We are seeking a tool, or set of tools to enable an organization to 
+NGDS requires software to support a variety of functions. This document is for brainstorming requirements/use scenarios. The Enterprise view focuses on domain operations (attempt to be independent of software). The [Functional View](#FunctionalView) section decomposes the operations into units that can be implemented in software components.
 
 ### Registry
 1. create and manage metadata documenting the information resources under the stewardship of the organization
