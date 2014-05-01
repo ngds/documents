@@ -1,0 +1,49 @@
+# A registry-repository-catalog system:
+
+## Enterprise view
+We are seeking a tool, or set of tools to enable an organization to 
+
+### Registry
+1. create and manage metadata documenting the information resources under the stewardship of the organization
+
+### Repository
+1. Provide a repository for long term preservation of digital information and work products associated with projects.
+1. Organize and manage repository items into logical collections to facilitate management and browsing of content.
+1. Selectively make repository items discoverable and accessible to outside users, with group level access controls to metadata describing the items and to the items (metadata may be discoverable for items that requires special permissions to access).
+
+### Catalog
+1. Assemble that metadata in a searchable catalog to allow members of the organization to find and access information
+1. Harvest metadata for selected resources into the catalog
+1. Provide user friendly search interface with Map-oriented search, and a text-and-facet oriented search.
+
+### Installable node
+
+### Federated information system operation
+
+The tools should be easy to use, standards-based, and free-open source. Software enabling these capabilities should be available in a package with a simple install procedure.
+
+## Functional View
+* Create USGIN metadata
+* Edit USGIN metadata
+  * Table and form views of metadata
+* Bulk update metadata (e.g. replace all occurrences of e-mail address A with address B)
+* Upload files to managed file system for long term preservation (checksums)
+  * publish to AZGS only or to public
+* Export packages consisting of bundled repository item (RI) and metadata
+* versioning of repository items; 
+    * URL for current version, and distinct URLs for specific version
+* repository items grouped in collections (one RI may be in many collections, collections are hierarchical)
+  * access control, publication options at item and collection level.
+* harvest csv, ISO from WAF into repository
+  * endpoints to harvest particular collections
+* expose CSW, openSearch, OAIPMH for harvest, search by others
+  * endpoints to access particular collections
+  * USGIN ISO, DC, DCAT output formats to start
+* members, editors, owner, public roles
+* groups of members, hierarchical groups
+* access control to collections at member and group level
+* harvest ISO, FGDC, DC from CSW into repository
+    * validation, accept flawed records for update, fixing
+
+NGDS has chosen to work with the CKAN platform for enabling these capabilities. Version 1 of the 
+
