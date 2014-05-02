@@ -2,6 +2,8 @@
 
 NGDS requires software to support a variety of functions. This document is for brainstorming requirements/use scenarios. The [Enterprise view](enterprise-view) focuses on domain operations (attempt to be independent of software). The [Functional View](#functional-view) section decomposes the operations into units that can be implemented in software components.
 
+NGDS is implementing the US GeoScience Information network framework for scientific data sharing. It is a sub-network focused on content related to geothermal systems, and geothermal energy exploration and development.
+
 
 ## Enterprise view
 
@@ -22,7 +24,7 @@ NGDS requires software to support a variety of functions. This document is for b
 3. Provide user friendly search interface with Map-oriented search, and a text-and-facet oriented search.
 
 ### Data Access
-1. Users want to be able to download data in convienient formats (csv, .shp, gml, GeoJSON)
+1. Users want to be able to download data in convenient formats (csv, .shp, gml, GeoJSON)
 2. Download should work across multiple services if they are interoperable
 3. Enable viewing XML metadata record for each resource
 
@@ -66,7 +68,70 @@ The tools should be easy to use, standards-based, and free-open source. Software
 # Software landscape
 Some open source projects we should be aware of:
 
-NGDS has chosen to work with the CKAN platform for enabling these capabilities. Version 1 of the NIAB implements a basic suit of the necessary capabilities.  Other CKAN branches like data.gov include functionality that we want to include in our build. 
+NGDS has chosen to work with the CKAN platform for enabling these capabilities. Version 1 of the NGDS Node-in-a-box (NIAB) implements a basic suit of the necessary capabilities.  Other CKAN branches like data.gov include functionality that we want to include in our build. 
 
-GeoNode, GeoNetwork, OpenGeoPortal, ESRI Geoportal  All implement various aspects of the functionality we need.
+[GeoNode](http://geonode.org/), [GeoNetwork](http://geonetwork-opensource.org/), [OpenGeoPortal](http://opengeoportal.org/), and [ESRI Geoportal](https://github.com/Esri/geoportal-server/wiki) all implement various aspects of the functionality we need.  Here are some notes on each:
 
+### [GeoNode](http://geonode.org/)
+GeoNode is a web-based application and platform for developing geospatial information systems (GIS) and for deploying spatial data infrastructures (SDI). GeoNode is built on GeoServer.
+
+* **Technology**: python, Django, Bootstrap, JQuery, PostGIS, GeoServer, pyCSW, openLayers, GeoExt. 
+* **APIs**: 
+  * Open Geospatial Consortium (OGC) Web Map Service (WMS), Web Feature Service (WFS), Web Coverage Service (WCS), and Catalogue Service for Web (CSW); 
+  * GeoServer REST API, 
+  * GeoNode search and REST APIs (I couldn't find any documentation)
+
+
+### [GeoNetwork](http://geonetwork-opensource.org/)
+Provides metadata editing and search functions,  an embedded interactive web map viewer. It is currently used in numerous Spatial Data Infrastructure initiatives across the world.  GeoNetwork is part of the [Open Source Geospatial Foundation (OSGeo)](http://www.osgeo.org) software stack
+
+* web interface 
+   *  search geospatial data across multiple local and distributed geospatial catalogues
+   *  combine Web Map Services from distributed servers around the world in the embedded map viewer
+   *  publish geospatial data using the online metadata editing tools and optionally the embedded GeoServer map server. 
+* Administrators manage user and group accounts, configure the server through web based and desktop utilities and schedule metadata harvesting from other catalogs.
+* Up- and downloading of files
+* Online editing of metadata with a powerful template system
+* Scheduled harvesting and synchronization of metadata between distributed catalogs
+* Fine-grained access control with group and user management
+* Multi-lingual user interface
+* support for metadata standards: ISO19115/ISO19119/ISO19110 following ISO19139, FGDC, and Dublin Core
+* **Technology**
+	* Java, XSLT
+* **APIs** 
+	* OGC-CSW 2.0.2 ISO Profile client and server 
+	* OAI-PMH client and server 
+	* Z39.50 protocols
+	* GeoRSS server
+	* GEO OpenSearch server
+	* WebDAV harvesting
+	* GeoNetwork to GeoNetwork harvesting support
+	* Map Services OGC-WMS, WFS, WCS, KML and others through the embedded GeoServer map server.
+	* Custom API allows URL access to most GeoNetwork functions
+
+### [OpenGeoPortal](http://opengeoportal.org/)
+web application to rapidly discover, preview, and retrieve geospatial data from multiple repositories. Open Geoportal is a front end to the geospatial data index in SOLR. Preview map services in web map viewer.
+Amazon Machine Image (AMI) available for easy implementation
+
+* **Technology**
+	* Tomcat, Java, JSP, Javascript, SOLR/Lucene, OpenLayers, JQuery, GeoServer, GeoWebCache, TileMill, relational db or file system
+
+* **APIs**
+	* SOLR API
+
+### [ESRI Geoportal](https://github.com/Esri/geoportal-server/wiki)
+Geoportal Server allows you to catalog the locations and descriptions of your organization's geospatial resources in a central repository called a geoportal, which you can publish to the Internet or your intranet. Visitors to the geoportal can search and access these resources to use with their projects. If you grant them permission, visitors can also register geospatial resources with the geoportal.
+
+* **Technology**
+	* Java, PostGIS, Lucene
+
+* **APIs**
+	* CSW, 
+	* ESRI REST
+
+
+### [GI-cat](http://essi-lab.eu/do/view/GIcat/WebHome)
+GI-cat is an implementation of a broker catalog service made by ESSI-Lab. It allows clients to discover and evaluate geoinformation resources over a federation of data sources. It publishes different catalog interfaces, allowing different clients to use the service. GI-cat features caching and mediation capabilities and can act as a broker towards disparate catalog and access services: by implementing metadata harmonization and protocol adaptation, it is able to transform query results to a uniform and consistent interface. GI-cat is based on a service-oriented framework of modular components and can be customized and tailored to support different deployment scenarios.
+
+* **APIs**
+	* [GI-cat catalog service](http://essi-lab.eu/do/viewfile/GIcat/GIcatDocumentation?rev=1;filename=GI-cat-6.0-specification-0.1.pdf)
