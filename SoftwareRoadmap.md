@@ -23,6 +23,11 @@ NGDS requires software to support a variety of functions. This document is for b
 ### Data Access
 1. Users want to be able to download data in convienient formats (csv, .shp, gml, GeoJSON)
 2. Download should work across multiple services if they are interoperable
+3. Enable viewing XML metadata record for each resource
+
+### Uploading Resources
+1. Create standardized web services along with metadata
+2. Upload standardized bulk metadata from Excel spreasheet (which will be parsed into ISO XML)
 
 ### Installable node
 1. For beginning system participation, barrier to entry should be low, so we want to provide an installable software package to implement basic metadata creation and publication for harvest, file repository, and data service deployment.
