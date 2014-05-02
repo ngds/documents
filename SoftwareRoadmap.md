@@ -80,6 +80,7 @@ GeoNode is a web-based application and platform for developing geospatial inform
   * Open Geospatial Consortium (OGC) Web Map Service (WMS), Web Feature Service (WFS), Web Coverage Service (WCS), and Catalogue Service for Web (CSW); 
   * GeoServer REST API, 
   * GeoNode search and REST APIs (I couldn't find any documentation)
+* **Geonode Assessment**:  This software is essentially just a user-friendly wrapper around Geoserver.  It only supports one dimesional resources, meaning that we can't have a package with multiple resources in it.  Resources can only contain a single layer.  Geonode is a Django project and relies on the Django ORM for it's search capabilities.  Currently, there isn't any support for richer search engines like SOLR or Lucene.  The stack relies on PyCSW for serving the CSW and all data that is uploaded is indexed in the PyCSW database.  This is really the only selling point for us, as this is something that CKAN does not do.  But, Geonode provides no support for harvesting data from remote sources.  SO -- This project looks promising, but isn't mature enough to accomplish our goals.
 
 
 ### [GeoNetwork](http://geonetwork-opensource.org/)
