@@ -137,3 +137,17 @@ GI-cat is an implementation of a broker catalog service made by ESSI-Lab. It all
 
 * **APIs**
 	* [GI-cat catalog service](http://essi-lab.eu/do/viewfile/GIcat/GIcatDocumentation?rev=1;filename=GI-cat-6.0-specification-0.1.pdf)
+
+### [CKAN](http://ckan.org/)
+Data management system built on top of the Pylons web framework.  For data, it supports publishing, harvesting and searching.  It also supports metadata construction and editing.  For user experience, it supports a hierarchical user managament and organizations system.  CKAN's strengths primarily revolve around the unopinionated nature of the system.  Vanilla CKAN provides all of the basic needs of a data portal: database management, search interface, user management, data and metadata creation and data harvesting.  It has an API for builidng extensions and developers are expected to use and build extensions to engineer a data system tailored to fit the needs of specific organizations.  Writing CKAN extensions is not all that hard, either.  CKAN's weaknesses result from it's core design being one that aims to solve too many problems.  By attempting to solve all of the problems associated with managing data, CKAN is a very vanilla application and therefore requires a lot of development to solve the problems of individual organizations.  A specific example of this is how CKAN deals with databases.  CKAN relies on PostgreSQL, which is a relational database management system.  Relational databases are perfect for solving problems with user/organizational management where we want to build relationships between different data objects in a system.  But relational databases aren't so great for solving problems with actual documents of data.  Most datasets exist independently of one another and it makes a lot more sense to structure a database of documents with multi-dimesional hierarchies instead of a spider web of primary and foreign keys littered throughout the database tables.
+
+* **Technology**:
+	* Python, JavaScript, PostgreSQL, PostGIS, RabbitMQ, SOLR, Tomcat
+* **APIS**:
+	* CSW
+	* REST
+	* Celery
+	* SOLR
+	* OWSLib
+	* SQLAlchemy
+* **CKAN Assessment**:  CKAN is the safest system to choose because this is the software that our current developers have worked with most recently and for the longest amount of time.  Vanilla CKAN does not look like a bad system.  It has a lot of strengths and has a great interface for extending the system.  Plus, it's a Python/JavaScript project, so it's automatically compatible with the other USGIN/NGDS tools people have developed over the years.
