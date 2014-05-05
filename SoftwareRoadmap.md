@@ -24,7 +24,7 @@ NGDS is implementing the US GeoScience Information network framework for scienti
 3. Provide user friendly search interface with Map-oriented search, and a text-and-facet oriented search.
 
 ### Data Access
-1. Users want to be able to download data in convenient formats (csv, .shp, gml, GeoJSON)
+1. Users want to be able to download data in convenient formats (csv, .shp, gml, GeoJSON, "Add to GoogleEarth", "Add to ArcMap", "Add to QGIS" or some other OSGS)
 2. Download should work across multiple services if they are interoperable
 3. Enable viewing XML metadata record for each resource
 
