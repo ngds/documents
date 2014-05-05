@@ -50,6 +50,7 @@ The tools should be easy to use, standards-based, and free-open source. Software
 * Bulk update metadata (e.g. replace all occurrences of e-mail address A with address B)
 * Upload files to managed file system for long term preservation (checksums)
   * publish to AZGS only or to public
+  * automatic conversion of bulk uploaded files (CSV) to ISO XML
 * Export packages consisting of bundled repository item (RI) and metadata
 * versioning of repository items; 
     * URL for current version, and distinct URLs for specific version
@@ -57,14 +58,15 @@ The tools should be easy to use, standards-based, and free-open source. Software
   * access control, publication options at item and collection level.
 * harvest csv, ISO from WAF into repository
   * endpoints to harvest particular collections
+* harvest ISO, FGDC, DC from CSW into repository
+    * validation, accept flawed records for update, fixing
 * expose CSW, openSearch, OAIPMH for harvest, search by others
   * endpoints to access particular collections
   * USGIN ISO, DC, DCAT output formats to start
 * members, editors, owner, public roles
 * groups of members, hierarchical groups
 * access control to collections at member and group level
-* harvest ISO, FGDC, DC from CSW into repository
-    * validation, accept flawed records for update, fixing
+
 
 # Software landscape
 Some open source projects we should be aware of:
