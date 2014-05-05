@@ -145,6 +145,8 @@ Geoportal Server allows you to catalog the locations and descriptions of your or
 	* CSW, 
 	* ESRI REST
 
+* **ESRI GeoPortal comments**: AZGS currently uses this along with a custom OS application for metadata management and validation developed with Node.js and Apache CouchDB. CouchDB is the back-end for a Django repository UI. Use of CouchDB creates an opportunity to bulk edit metadata from a view of repository data before it is harvested into the catalog (ESRI GeoPortal) and is probably the biggest benefit from this system. Web services cannot be created, only metadata is manged with this system, so users would have to have a separate method of web service deployment. 
+
 
 ### [GI-cat](http://essi-lab.eu/do/view/GIcat/WebHome)
 GI-cat is an implementation of a broker catalog service made by ESSI-Lab. It allows clients to discover and evaluate geoinformation resources over a federation of data sources. It publishes different catalog interfaces, allowing different clients to use the service. GI-cat features caching and mediation capabilities and can act as a broker towards disparate catalog and access services: by implementing metadata harmonization and protocol adaptation, it is able to transform query results to a uniform and consistent interface. GI-cat is based on a service-oriented framework of modular components and can be customized and tailored to support different deployment scenarios.
