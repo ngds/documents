@@ -65,7 +65,8 @@ The tools should be easy to use, standards-based, and free-open source. Software
   * endpoints to access particular collections
   * USGIN ISO, DC, DCAT output formats to start
 * Create schema-compliant web services
-* validate web services for schema-compliance 
+* validate web services for schema-compliance
+* Integrate current information exchange (model) management
 * members, editors, owner, public roles
 * groups of members, hierarchical groups
 * access control to collections at member and group level
