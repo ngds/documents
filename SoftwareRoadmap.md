@@ -27,6 +27,7 @@ NGDS is implementing the US GeoScience Information network framework for scienti
 1. Users want to be able to download data in convenient formats (csv, .shp, gml, kml, GeoJSON, "Add to GoogleEarth", "Add to ArcMap", "Add to QGIS" or some other OSGS)
 2. Download should work across multiple services if they are interoperable
 3. Enable viewing XML metadata record for each resource
+4. Should be a live link to contact data source provider
 
 ### Installable node
 1. For beginning system participation, barrier to entry should be low, so we want to provide an installable software package to implement basic metadata creation and publication for harvest, file repository, and data service deployment.
