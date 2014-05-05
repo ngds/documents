@@ -21,7 +21,8 @@ NGDS is implementing the US GeoScience Information network framework for scienti
 ### Catalog
 1. Assemble that metadata in a searchable catalog to allow members of the organization to find and access information
 2. Harvest metadata for selected resources into the catalog
-3. Provide user friendly search interface with Map-oriented search, and a text-and-facet oriented search.
+3. Validate XML while or before harvesting
+4. Provide user friendly search interface with Map-oriented search, and a text-and-facet oriented search.
 
 ### Data Access
 1. Users want to be able to download data in convenient formats (csv, .shp, gml, kml, GeoJSON, "Add to GoogleEarth", "Add to ArcMap", "Add to QGIS" or some other OSGS)
