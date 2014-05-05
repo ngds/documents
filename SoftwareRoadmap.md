@@ -31,7 +31,7 @@ NGDS is implementing the US GeoScience Information network framework for scienti
 
 ### Installable node
 1. For beginning system participation, barrier to entry should be low, so we want to provide an installable software package to implement basic metadata creation and publication for harvest, file repository, and data service deployment.
-2. Create standardized web services along with metadata
+2. Create standardized web services along with metadata; schema resolution of WFS requests desireable 
 3. Manual external file validation for data for services; automatic validation of data for services files
 3. Upload standardized bulk metadata from Excel spreasheet (which will be parsed into ISO XML)
 4. Ensuring meaningful URIs for each record of an uploaded standardized dataset, adhereing to NGDS URI standards (having name authorities, tokens) already in place, creating URL redirections for those URIs
