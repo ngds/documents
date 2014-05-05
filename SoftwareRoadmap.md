@@ -117,6 +117,7 @@ Provides metadata editing and search functions,  an embedded interactive web map
 	* Map Services OGC-WMS, WFS, WCS, KML and others through the embedded GeoServer map server.
 	* Custom API allows URL access to most GeoNetwork functions
 * **GeoNetwork Assessment**: If we decide to rebuild this project from scratch, then GeoNetwork looks like it would be a great platform for building on top of.  Not only does it have a large user base and great documentation; the real selling point is that it's a Java web application which makes it platform independent out of the box.  Unfortunately, the fact that this is a Java application makes it a poor choice for NGDS because for years we have been building our tools with Python and JavaScript.  It wouldn't be impossible to make our tools compatible with GeoNetwork, but we'd either have to rely on Unix subprocesses or (I think) we'd have to host our Python/ JavaScript applications on separate ports and build a REST interface for them to communicate with GeoNetwork.
+* Unlike GeoNode, there is no publishing of web services, so this is not a stand-alone option.
 
 ### [OpenGeoPortal](http://opengeoportal.org/)
 web application to rapidly discover, preview, and retrieve geospatial data from multiple repositories. Open Geoportal is a front end to the geospatial data index in SOLR. Preview map services in web map viewer.
