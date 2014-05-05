@@ -122,7 +122,11 @@ Amazon Machine Image (AMI) available for easy implementation
 	* SOLR API
 
 ### [ESRI Geoportal](https://github.com/Esri/geoportal-server/wiki)
-Geoportal Server allows you to catalog the locations and descriptions of your organization's geospatial resources in a central repository called a geoportal, which you can publish to the Internet or your intranet. Visitors to the geoportal can search and access these resources to use with their projects. If you grant them permission, visitors can also register geospatial resources with the geoportal.
+Geoportal Server allows you to catalog the locations and descriptions of your organization's geospatial resources in a central repository called a geoportal, which you can publish to the Internet or your intranet. Visitors to the geoportal can search and access these resources to use with their projects. If you grant them permission, visitors can also register geospatial resources with the geoportal. Geoportal provides xml templates, definitions, and transformation files that can be modified to alter the behavior of xml validation, allowing organizations to apply preferred profiles.
+  * customizable metadata profiles
+  * xml validation tools, xml file upload, and individual resource error handling
+  * Harvest from an ESRI metadata service, Web-accessible folder, open Archive initiative service, CSW catalog, or THREDDS Data server catalog
+  * Synchronization between all approved harvest sources
 
 * **Technology**
 	* Java, PostGIS, Lucene
