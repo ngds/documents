@@ -50,7 +50,7 @@ The tools should be easy to use, standards-based, and free-open source. Software
 * Bulk update metadata (e.g. replace all occurrences of e-mail address A with address B)
 * Upload files to managed file system for long term preservation (checksums)
   * publish to AZGS only or to public
-  * automatic conversion of bulk uploaded files (CSV) to ISO XML
+* Automatic conversion of bulk uploaded files (CSV) to ISO XML
 * Export packages consisting of bundled repository item (RI) and metadata
 * versioning of repository items; 
     * URL for current version, and distinct URLs for specific version
