@@ -121,13 +121,14 @@ Provides metadata editing and search functions,  an embedded interactive web map
 
 ### [OpenGeoPortal](http://opengeoportal.org/)
 web application to rapidly discover, preview, and retrieve geospatial data from multiple repositories. Open Geoportal is a front end to the geospatial data index in SOLR. Preview map services in web map viewer.
-Amazon Machine Image (AMI) available for easy implementation. Technical overveiw: http://opengeoportal.org/wp-content/uploads/2013/10/Steve_McDonald_Chris_Barnett_OGPTechnicalIntroduction.pdf
+Amazon Machine Image (AMI) available for easy implementation. Technical overveiw: http://opengeoportal.org/wp-content/uploads/2013/10/Steve_McDonald_Chris_Barnett_OGPTechnicalIntroduction.pdf.  OpenGeoPortal doens't appear to have the metadata management capabilities like GeoNetwork.
 
 * **Technology**
 	* Tomcat, Java, JSP, Javascript, SOLR/Lucene, OpenLayers, JQuery, GeoServer, GeoWebCache, TileMill, relational db or file system
 
 * **APIs**
 	* SOLR API
+
 
 ### [ESRI Geoportal](https://github.com/Esri/geoportal-server/wiki)
 Geoportal Server allows you to catalog the locations and descriptions of your organization's geospatial resources in a central repository called a geoportal, which you can publish to the Internet or your intranet. Visitors to the geoportal can search and access these resources to use with their projects. If you grant them permission, visitors can also register geospatial resources with the geoportal. Geoportal provides xml templates, definitions, and transformation files that can be modified to alter the behavior of xml validation, allowing organizations to apply preferred profiles.
