@@ -179,48 +179,48 @@ Features
 Thoughts on Couch vs Mongo:
 * MongoDB: If you need dynamic queries. If you prefer to define indexes, not map/reduce functions. If you need good performance on a big DB. If you wanted CouchDB, but your data changes too much, filling up disks; Master-Slave Replication ONLY
 * CouchDB : For accumulating, occasionally changing data, on which pre-defined queries are to be run. Places where versioning is important; Master-Master Replication
-CouchDB (http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis)
-    Written in: Erlang
-    Main point: DB consistency, ease of use
-    License: Apache
-    Protocol: HTTP/REST
-    Bi-directional (!) replication,
-    continuous or ad-hoc,
-    with conflict detection,
-    thus, master-master replication. (!)
-    MVCC - write operations do not block reads
-    Previous versions of documents are available
-    Crash-only (reliable) design
-    Needs compacting from time to time
-    Views: embedded map/reduce
-    Formatting views: lists & shows
-    Server-side document validation possible
-    Authentication possible
-    Real-time updates via '_changes' (!)
-    Attachment handling
-    thus, CouchApps (standalone js apps)
-Best used: For accumulating, occasionally changing data, on which pre-defined queries are to be run. Places where versioning is important.
-For example: CRM, CMS systems. Master-master replication is an especially interesting feature, allowing easy multi-site deployments. 
-MongoDB (http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis)
-    Written in: C++
-    Main point: Retains some friendly properties of SQL. (Query, index)
-    License: AGPL (Drivers: Apache)
-    Protocol: Custom, binary (BSON)
-    Master/slave replication (auto failover with replica sets)
-    Sharding built-in
-    Queries are javascript expressions
-    Run arbitrary javascript functions server-side
-    Better update-in-place than CouchDB
-    Uses memory mapped files for data storage
-    Performance over features
-    Journaling (with --journal) is best turned on
-    On 32bit systems, limited to ~2.5Gb
-    An empty database takes up 192Mb
-    GridFS to store big data + metadata (not actually an FS)
-    Has geospatial indexing
-    Data center aware 
-Best used: If you need dynamic queries. If you prefer to define indexes, not map/reduce functions. If you need good performance on a big DB. If you wanted CouchDB, but your data changes too much, filling up disks.
-For example: For most things that you would do with MySQL or PostgreSQL, but having predefined columns really holds you back. 
+* CouchDB (http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis)
+    Written in: Erlang  
+    Main point: DB consistency, ease of use  
+    License: Apache  
+    Protocol: HTTP/REST  
+    Bi-directional (!) replication,  
+    continuous or ad-hoc,  
+    with conflict detection,  
+    thus, master-master replication. (!)  
+    MVCC - write operations do not block reads  
+    Previous versions of documents are available  
+    Crash-only (reliable) design  
+    Needs compacting from time to time  
+    Views: embedded map/reduce  
+    Formatting views: lists & shows  
+    Server-side document validation possible  
+    Authentication possible  
+    Real-time updates via '_changes' (!)  
+    Attachment handling  
+    thus, CouchApps (standalone js apps)  
+Best used: For accumulating, occasionally changing data, on which pre-defined queries are to be run. Places where versioning is important.  
+For example: CRM, CMS systems. Master-master replication is an especially interesting feature, allowing easy multi-site deployments.   
+* MongoDB (http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis)
+    Written in: C++  
+    Main point: Retains some friendly properties of SQL. (Query, index)  
+    License: AGPL (Drivers: Apache)  
+    Protocol: Custom, binary (BSON)  
+    Master/slave replication (auto failover with replica sets)  
+    Sharding built-in  
+    Queries are javascript expressions  
+    Run arbitrary javascript functions server-side  
+    Better update-in-place than CouchDB  
+    Uses memory mapped files for data storage  
+    Performance over features  
+    Journaling (with --journal) is best turned on  
+    On 32bit systems, limited to ~2.5Gb  
+    An empty database takes up 192Mb  
+    GridFS to store big data + metadata (not actually an FS)  
+    Has geospatial indexing  
+    Data center aware   
+Best used: If you need dynamic queries. If you prefer to define indexes, not map/reduce functions. If you need good performance on a big DB. If you wanted CouchDB, but your data changes too much, filling up disks.  
+For example: For most things that you would do with MySQL or PostgreSQL, but having predefined columns really holds you back.   
 
 ### Amazon: Files on EC2 with an S3 back-end
 * Recommended by Ryan
