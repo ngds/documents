@@ -1,4 +1,11 @@
 # NGDS Software brainstorming - Catalog and Repository Discussion
+We want to take elements from all the best workflows, with the knowledge we've gained about how the system should work, as well as the state which data/metadata comes into a system in reality, for the best functioning system. One overview idea is: 
+* 'staging repository' where data is initially brought in for some analysis, metadata QA/QC, or to provide feedback for a data provider
+* modules can be built to support metadata/data QA/QC and standardization (GeoCoding, ExcelToNGDS tool, CSV to XML, etc)
+* catalog system, where metadata can be managed and served out from a CSW endpoint
+* an interface that ingests this data, harvests from other nodes, CSWs, and WAFs  
+  
+Below are some considerations and discussion for catalog systems and repository systems.
 
 ## Software landscape
 
@@ -98,9 +105,12 @@ Data management system built on top of the Pylons web framework.  For data, it s
 	* OWSLib
 	* SQLAlchemy
 * **CKAN Assessment**:  CKAN is the safest system to choose because this is the software that our current developers have worked with most recently and for the longest amount of time.  Vanilla CKAN does not look like a bad system.  It has a lot of strengths and has a great interface for extending the system.  Plus, it's a Python/JavaScript project, so it's automatically compatible with the other USGIN/NGDS tools people have developed over the years. CON - metadata management is not okay!  PRO - Web service deployment using GeoServer and PostGIS; flexible enough to integrate model management.  If we can integrate some of the work (even conceptually) from the custom metadata mangement tools Ryan built for AZGS, this option would look far better. 
-
-
+  
+  
 ## Repositories
 
-### repository.stategeothermaldata.org
-AZGS currently uses Ryan's custom OS application for metadata management and validation developed with Node.js and Apache CouchDB. CouchDB is the back-end for a Django repository UI. Use of CouchDB creates an opportunity to bulk edit metadata from a view of repository data before it is harvested into the catalog (ESRI GeoPortal) and is probably the biggest benefit from this system.
+### [State Geothermal Repository](http://repository.stategeothermaldata.org)
+AZGS currently uses Ryan's custom OS application for metadata management and validation developed with Node.js and Apache CouchDB. CouchDB is the back-end for a Django repository UI. Use of CouchDB creates an opportunity to bulk edit metadata from a view of repository data before it is harvested into the catalog (ESRI GeoPortal) and is probably the biggest benefit from this system.  
+  
+  
+## Modules for 'staging repository' concept
