@@ -125,7 +125,102 @@ Features
 * accessible by REST interface or an object-oriented Java API
 * can develop with Python or JavaScript (http://www.neo4j.org/develop)
 
-### MongoDB
+Neo4J vs ElasticSearch discussion (http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis):
+Neo4J:
+    Written in: Java
+    Main point: Graph database - connected data
+    License: GPL, some features AGPL/commercial
+    Protocol: HTTP/REST (or embedding in Java)
+    Standalone, or embeddable into Java applications
+    Full ACID conformity (including durable data)
+    Both nodes and relationships can have metadata
+    Integrated pattern-matching-based query language ("Cypher")
+    Also the "Gremlin" graph traversal language can be used
+    Indexing of nodes and relationships
+    Nice self-contained web admin
+    Advanced path-finding with multiple algorithms
+    Indexing of keys and relationships
+    Optimized for reads
+    Has transactions (in the Java API)
+    Scriptable in Groovy
+    Online backup, advanced monitoring and High Availability is AGPL/commercial licensed
+Best used: For graph-style, rich or complex, interconnected data. Neo4j is quite different from the others in this sense.
+ElasticSearch
+    Written in: Java
+    Main point: Advanced Search
+    License: Apache
+    Protocol: JSON over HTTP (Plugins: Thrift, memcached)
+    Stores JSON documents
+    Has versioning
+    Parent and children documents
+    Documents can time out
+    Very versatile and sophisticated querying, scriptable
+    Write consistency: one, quorum or all
+    Sorting by score (!)
+    Geo distance sorting
+    Fuzzy searches (approximate date, etc) (!)
+    Asynchronous replication
+    Atomic, scripted updates (good for counters, etc)
+    Can maintain automatic "stats groups" (good for debugging)
+    Still depends very much on only one developer (kimchy). 
+Best used: When you have objects with (flexible) fields, and you need "advanced search" functionality.
+
+
+### [MongoDB](https://www.mongodb.org/)
+If scaleability is not a concern (not likely for us) CouchDB or MongoDB are good choices. 
+Features
+* NoSQL DB
+* written in C++
+* JSON-style documents with dynamic schemas
+* full index support
+* DB replication 
+* document-based queries  
+
+Thoughts on Couch vs Mongo:
+* MongoDB: If you need dynamic queries. If you prefer to define indexes, not map/reduce functions. If you need good performance on a big DB. If you wanted CouchDB, but your data changes too much, filling up disks; Master-Slave Replication ONLY
+* CouchDB : For accumulating, occasionally changing data, on which pre-defined queries are to be run. Places where versioning is important; Master-Master Replication
+CouchDB (http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis)
+    Written in: Erlang
+    Main point: DB consistency, ease of use
+    License: Apache
+    Protocol: HTTP/REST
+    Bi-directional (!) replication,
+    continuous or ad-hoc,
+    with conflict detection,
+    thus, master-master replication. (!)
+    MVCC - write operations do not block reads
+    Previous versions of documents are available
+    Crash-only (reliable) design
+    Needs compacting from time to time
+    Views: embedded map/reduce
+    Formatting views: lists & shows
+    Server-side document validation possible
+    Authentication possible
+    Real-time updates via '_changes' (!)
+    Attachment handling
+    thus, CouchApps (standalone js apps)
+Best used: For accumulating, occasionally changing data, on which pre-defined queries are to be run. Places where versioning is important.
+For example: CRM, CMS systems. Master-master replication is an especially interesting feature, allowing easy multi-site deployments. 
+MongoDB (http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis)
+    Written in: C++
+    Main point: Retains some friendly properties of SQL. (Query, index)
+    License: AGPL (Drivers: Apache)
+    Protocol: Custom, binary (BSON)
+    Master/slave replication (auto failover with replica sets)
+    Sharding built-in
+    Queries are javascript expressions
+    Run arbitrary javascript functions server-side
+    Better update-in-place than CouchDB
+    Uses memory mapped files for data storage
+    Performance over features
+    Journaling (with --journal) is best turned on
+    On 32bit systems, limited to ~2.5Gb
+    An empty database takes up 192Mb
+    GridFS to store big data + metadata (not actually an FS)
+    Has geospatial indexing
+    Data center aware 
+Best used: If you need dynamic queries. If you prefer to define indexes, not map/reduce functions. If you need good performance on a big DB. If you wanted CouchDB, but your data changes too much, filling up disks.
+For example: For most things that you would do with MySQL or PostgreSQL, but having predefined columns really holds you back. 
 
 ### Amazon: Files on EC2 with an S3 back-end
 * Recommended by Ryan
