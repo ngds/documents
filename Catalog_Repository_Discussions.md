@@ -113,7 +113,9 @@ Data management system built on top of the Pylons web framework.  For data, it s
 AZGS currently uses Ryan's custom OS application for metadata management and validation developed with Node.js and Apache CouchDB. CouchDB is the back-end for a Django repository UI. Use of CouchDB creates an opportunity to bulk edit metadata from a view of repository data before it is harvested into the catalog (ESRI GeoPortal) and is probably the biggest benefit from this system. 
 
 * **Technology**:
-	* Node.js, JavaScript, CoucbDB (https://github.com/rclark/project-open-catalog)  
+	* Node.js, JavaScript, CoucbDB (https://github.com/rclark/project-open-catalog)
+
+* **comments**: Couch, Couch, Couch!  We know it. We like it. 
 
 ### [Neo4J Graph Database](http://projects.spring.io/spring-data-neo4j/)
 Features
