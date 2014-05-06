@@ -124,6 +124,13 @@ Features
 * massively scalable, up to several billion nodes/relationships/properties
 * accessible by REST interface or an object-oriented Java API
 * can develop with Python or JavaScript (http://www.neo4j.org/develop)
-  
+
+### MongoDB
+
+### Amazon: Files on EC2 with an S3 back-end
+* Recommended by Ryan
+* Super useful if concerned about scaleability
+* Used instead of CouchDB or MongoDB, but need to build a separate spatial index; can index by keys, just a sequential list  
+
   
 ## Modules for 'staging repository' concept
