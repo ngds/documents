@@ -78,6 +78,8 @@ Some open source projects we should be aware of:
 
 NGDS has chosen to work with the CKAN platform for enabling these capabilities. Version 1 of the NGDS Node-in-a-box (NIAB) implements a basic suit of the necessary capabilities.  Other CKAN branches like data.gov include functionality that we want to include in our build. 
 
+## Catalogs
+
 [GeoNode](http://geonode.org/), [GeoNetwork](http://geonetwork-opensource.org/), [OpenGeoPortal](http://opengeoportal.org/), and [ESRI Geoportal](https://github.com/Esri/geoportal-server/wiki) all implement various aspects of the functionality we need.  Here are some notes on each:
 
 ### [GeoNode](http://geonode.org/)
@@ -170,3 +172,5 @@ Data management system built on top of the Pylons web framework.  For data, it s
 	* OWSLib
 	* SQLAlchemy
 * **CKAN Assessment**:  CKAN is the safest system to choose because this is the software that our current developers have worked with most recently and for the longest amount of time.  Vanilla CKAN does not look like a bad system.  It has a lot of strengths and has a great interface for extending the system.  Plus, it's a Python/JavaScript project, so it's automatically compatible with the other USGIN/NGDS tools people have developed over the years. CON - metadata management is not okay!  PRO - Web service deployment using GeoServer and PostGIS; flexible enough to integrate model management.  If we can integrate some of the work (even conceptually) from the custom metadata mangement tools Ryan built for AZGS, this option would look far better. 
+
+## Repositories
