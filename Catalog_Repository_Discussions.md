@@ -110,7 +110,20 @@ Data management system built on top of the Pylons web framework.  For data, it s
 ## Repositories
 
 ### [State Geothermal Repository](http://repository.stategeothermaldata.org)
-AZGS currently uses Ryan's custom OS application for metadata management and validation developed with Node.js and Apache CouchDB. CouchDB is the back-end for a Django repository UI. Use of CouchDB creates an opportunity to bulk edit metadata from a view of repository data before it is harvested into the catalog (ESRI GeoPortal) and is probably the biggest benefit from this system.  
+AZGS currently uses Ryan's custom OS application for metadata management and validation developed with Node.js and Apache CouchDB. CouchDB is the back-end for a Django repository UI. Use of CouchDB creates an opportunity to bulk edit metadata from a view of repository data before it is harvested into the catalog (ESRI GeoPortal) and is probably the biggest benefit from this system. 
+
+* **Technology**:
+	* Node.js, JavaScript, CoucbDB (https://github.com/rclark/project-open-catalog)  
+
+### [Neo4J Graph Database](http://projects.spring.io/spring-data-neo4j/)
+Features
+* Enterprise database (graph model for data representation)
+* Uses relational database and other NOSQL alternatives
+* Neo4j is flexible, yet, unlike other NOSQL databases, offers structure
+* Uses Cypher (particular Graph query language)
+* massively scalable, up to several billion nodes/relationships/properties
+* accessible by REST interface or an object-oriented Java API
+* can develop with Python or JavaScript (http://www.neo4j.org/develop)
   
   
 ## Modules for 'staging repository' concept
