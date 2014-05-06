@@ -1,6 +1,6 @@
 # NGDS Software brainstorming
 
-NGDS requires software to support a variety of functions. This document is for brainstorming requirements/use scenarios. The [Enterprise view](#enterprise-view) focuses on domain operations (attempt to be independent of software). The [Functional View](#functional-view) section decomposes the operations into units that can be implemented in software components.
+NGDS requires software to support a variety of functions. This document is for brainstorming requirements/use scenarios. The [Enterprise view](#enterprise-view) focuses on domain operations (attempt to be independent of software). The [Functional View](#functional-view) section decomposes the operations into units that can be implemented in software components. For in-depth discussion regarding specific software options, see https://github.com/ngds/documents/blob/master/Catalog_Repository_Discussions.md.
 
 NGDS is implementing the US GeoScience Information network framework for scientific data sharing. It is a sub-network focused on content related to geothermal systems, and geothermal energy exploration and development.
 
