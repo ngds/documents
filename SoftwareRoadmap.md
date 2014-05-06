@@ -117,12 +117,12 @@ Provides metadata editing and search functions,  an embedded interactive web map
 	* GeoNetwork to GeoNetwork harvesting support
 	* Map Services OGC-WMS, WFS, WCS, KML and others through the embedded GeoServer map server.
 	* Custom API allows URL access to most GeoNetwork functions
-* **GeoNetwork Assessment**: If we decide to rebuild this project from scratch, then GeoNetwork looks like it would be a great platform for building on top of.  Not only does it have a large user base and great documentation; the real selling point is that it's a Java web application which makes it platform independent out of the box.  Unfortunately, the fact that this is a Java application makes it a poor choice for NGDS because for years we have been building our tools with Python and JavaScript.  It wouldn't be impossible to make our tools compatible with GeoNetwork, but we'd either have to rely on Unix subprocesses or (I think) we'd have to host our Python/ JavaScript applications on separate ports and build a REST interface for them to communicate with GeoNetwork.
+* **GeoNetwork Assessment**: If we decide to rebuild this project from scratch, then GeoNetwork looks like it would be a great platform for building on top of.  Not only does it have a large user base and great documentation; the real selling point is that it's a Java web application which makes it platform independent out of the box.  Unfortunately, the fact that this is a Java application makes it a poor choice for NGDS because for years we have been building our tools with Python and JavaScript.  It wouldn't be impossible to make our tools compatible with GeoNetwork, but we'd either have to rely on Unix subprocesses or (I think) we'd have to host our Python/ JavaScript applications on separate ports and build a REST interface for them to communicate with GeoNetwork. - Geonetwork also has an organized metadata managment system that allows organizations to apply different profiles using XML templates and XSLT transformations. -Editing individual resources in this systems UI, like most other metadata catalogs, is not ideal. 
 
 
 ### [OpenGeoPortal](http://opengeoportal.org/)
 web application to rapidly discover, preview, and retrieve geospatial data from multiple repositories. Open Geoportal is a front end to the geospatial data index in SOLR. Preview map services in web map viewer.
-Amazon Machine Image (AMI) available for easy implementation. Technical overveiw: http://opengeoportal.org/wp-content/uploads/2013/10/Steve_McDonald_Chris_Barnett_OGPTechnicalIntroduction.pdf.  OpenGeoPortal doens't appear to have the metadata management capabilities like GeoNetwork.
+Amazon Machine Image (AMI) available for easy implementation. Technical overveiw: http://opengeoportal.org/wp-content/uploads/2013/10/Steve_McDonald_Chris_Barnett_OGPTechnicalIntroduction.pdf.  OpenGeoPortal doens't appear to have the metadata management capabilities like GeoNetwork or Geoportal.
 
 * **Technology**
 	* Tomcat, Java, JSP, Javascript, SOLR/Lucene, OpenLayers, JQuery, GeoServer, GeoWebCache, TileMill, relational db or file system
@@ -131,6 +131,7 @@ Amazon Machine Image (AMI) available for easy implementation. Technical overveiw
 	* SOLR API
 
 
+* 
 ### [ESRI Geoportal](https://github.com/Esri/geoportal-server/wiki)
 Geoportal Server allows you to catalog the locations and descriptions of your organization's geospatial resources in a central repository called a geoportal, which you can publish to the Internet or your intranet. Visitors to the geoportal can search and access these resources to use with their projects. If you grant them permission, visitors can also register geospatial resources with the geoportal. Geoportal provides xml templates, definitions, and transformation files that can be modified to alter the behavior of xml validation, allowing organizations to apply preferred profiles.
   * customizable metadata profiles
@@ -139,13 +140,14 @@ Geoportal Server allows you to catalog the locations and descriptions of your or
   * Synchronization between all approved harvest sources
 
 * **Technology**
-	* Java, PostGIS, Lucene
+	* Java, PostGIS, Lucene, Tomcat, Javascript, XML, XSLT, PostgreSQL
 
 * **APIs**
-	* CSW, 
+	* CSW 
 	* ESRI REST
 
 * **ESRI GeoPortal comments**: AZGS currently uses this along with a custom OS application for metadata management and validation developed with Node.js and Apache CouchDB. CouchDB is the back-end for a Django repository UI. Use of CouchDB creates an opportunity to bulk edit metadata from a view of repository data before it is harvested into the catalog (ESRI GeoPortal) and is probably the biggest benefit from this system. Web services cannot be created, only metadata is manged with this system, so users would have to have a separate method of web service deployment. 
+* **Metadata Management **: The Geoportal has been incredibly convenient for metadata management, having XML and XSLT documents available for customization has helped in implementing the USGIN-ISO profile.  This style of transformation has made taking outside distributed metadata and conforming it to our specs much easier.  Geoportal also preservers the xml document and gives somewhat detailed errors for each failed record. Geoportal and Ryans repo tool have consistently been the most used applications for metadata management. 
 
 
 ### [GI-cat](http://essi-lab.eu/do/view/GIcat/WebHome)
@@ -166,4 +168,4 @@ Data management system built on top of the Pylons web framework.  For data, it s
 	* SOLR
 	* OWSLib
 	* SQLAlchemy
-* **CKAN Assessment**:  CKAN is the safest system to choose because this is the software that our current developers have worked with most recently and for the longest amount of time.  Vanilla CKAN does not look like a bad system.  It has a lot of strengths and has a great interface for extending the system.  Plus, it's a Python/JavaScript project, so it's automatically compatible with the other USGIN/NGDS tools people have developed over the years. CON - metadata management is not okay!  PRO - Web service deployment using GeoServer and PostGIS; flexible enough to integrate model management.  If we can integrate some of the work (even conceptually) from the custom metadata mangement tools Ryan built for AZGS, this option would look far better.
+* **CKAN Assessment**:  CKAN is the safest system to choose because this is the software that our current developers have worked with most recently and for the longest amount of time.  Vanilla CKAN does not look like a bad system.  It has a lot of strengths and has a great interface for extending the system.  Plus, it's a Python/JavaScript project, so it's automatically compatible with the other USGIN/NGDS tools people have developed over the years. CON - metadata management is not okay!  PRO - Web service deployment using GeoServer and PostGIS; flexible enough to integrate model management.  If we can integrate some of the work (even conceptually) from the custom metadata mangement tools Ryan built for AZGS, this option would look far better. 
