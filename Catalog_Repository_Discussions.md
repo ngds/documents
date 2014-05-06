@@ -165,7 +165,7 @@ Best used: For graph-style, rich or complex, interconnected data. Neo4j is quite
     Still depends very much on only one developer (kimchy).   
 Best used: When you have objects with (flexible) fields, and you need "advanced search" functionality.  
 
-* **Neo4J comments**: Perhaps not exactly geared towards our need, a few new languages to learn (Cypher, Gremlin)
+* **Neo4J comments**: Perhaps not exactly geared toward our needs; a few new languages to learn (Cypher, Gremlin)
 
 ### [MongoDB](https://www.mongodb.org/)
 If scaleability is not a concern (not likely for us) CouchDB or MongoDB are good choices. Features:  
