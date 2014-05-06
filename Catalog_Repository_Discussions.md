@@ -167,8 +167,7 @@ Best used: When you have objects with (flexible) fields, and you need "advanced 
 
 
 ### [MongoDB](https://www.mongodb.org/)
-If scaleability is not a concern (not likely for us) CouchDB or MongoDB are good choices. 
-Features
+If scaleability is not a concern (not likely for us) CouchDB or MongoDB are good choices. Features:  
 * NoSQL DB
 * written in C++
 * JSON-style documents with dynamic schemas
@@ -221,6 +220,8 @@ For example: CRM, CMS systems. Master-master replication is an especially intere
     Data center aware   
 Best used: If you need dynamic queries. If you prefer to define indexes, not map/reduce functions. If you need good performance on a big DB. If you wanted CouchDB, but your data changes too much, filling up disks.  
 For example: For most things that you would do with MySQL or PostgreSQL, but having predefined columns really holds you back.   
+
+* **Couch vs Mongo comments**: Seems that we don't really need the extra processing power that Mongo provides, and master-master DB replication that Couch provides can be really useful. We know Couch already, and like that the views can be constructed to do edits without anything predefined.
 
 ### Amazon: Files on EC2 with an S3 back-end
 * Recommended by Ryan
