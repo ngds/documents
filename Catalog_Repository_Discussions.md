@@ -126,44 +126,44 @@ Features
 * can develop with Python or JavaScript (http://www.neo4j.org/develop)
 
 Neo4J vs ElasticSearch discussion (http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis):
-Neo4J:
-    Written in: Java
-    Main point: Graph database - connected data
-    License: GPL, some features AGPL/commercial
-    Protocol: HTTP/REST (or embedding in Java)
-    Standalone, or embeddable into Java applications
-    Full ACID conformity (including durable data)
-    Both nodes and relationships can have metadata
-    Integrated pattern-matching-based query language ("Cypher")
-    Also the "Gremlin" graph traversal language can be used
-    Indexing of nodes and relationships
-    Nice self-contained web admin
-    Advanced path-finding with multiple algorithms
-    Indexing of keys and relationships
-    Optimized for reads
-    Has transactions (in the Java API)
-    Scriptable in Groovy
-    Online backup, advanced monitoring and High Availability is AGPL/commercial licensed
-Best used: For graph-style, rich or complex, interconnected data. Neo4j is quite different from the others in this sense.
-ElasticSearch
-    Written in: Java
-    Main point: Advanced Search
-    License: Apache
-    Protocol: JSON over HTTP (Plugins: Thrift, memcached)
-    Stores JSON documents
-    Has versioning
-    Parent and children documents
-    Documents can time out
-    Very versatile and sophisticated querying, scriptable
-    Write consistency: one, quorum or all
-    Sorting by score (!)
-    Geo distance sorting
-    Fuzzy searches (approximate date, etc) (!)
-    Asynchronous replication
-    Atomic, scripted updates (good for counters, etc)
-    Can maintain automatic "stats groups" (good for debugging)
-    Still depends very much on only one developer (kimchy). 
-Best used: When you have objects with (flexible) fields, and you need "advanced search" functionality.
+* Neo4J:
+    Written in: Java  
+    Main point: Graph database - connected data  
+    License: GPL, some features AGPL/commercial  
+    Protocol: HTTP/REST (or embedding in Java)  
+    Standalone, or embeddable into Java applications  
+    Full ACID conformity (including durable data)  
+    Both nodes and relationships can have metadata  
+    Integrated pattern-matching-based query language ("Cypher")  
+    Also the "Gremlin" graph traversal language can be used  
+    Indexing of nodes and relationships  
+    Nice self-contained web admin  
+    Advanced path-finding with multiple algorithms  
+    Indexing of keys and relationships  
+    Optimized for reads  
+    Has transactions (in the Java API)  
+    Scriptable in Groovy  
+    Online backup, advanced monitoring and High Availability is AGPL/commercial licensed  
+Best used: For graph-style, rich or complex, interconnected data. Neo4j is quite different from the others in this sense.  
+* ElasticSearch
+    Written in: Java  
+    Main point: Advanced Search  
+    License: Apache  
+    Protocol: JSON over HTTP (Plugins: Thrift, memcached)  
+    Stores JSON documents  
+    Has versioning  
+    Parent and children documents  
+    Documents can time out  
+    Very versatile and sophisticated querying, scriptable  
+    Write consistency: one, quorum or all  
+    Sorting by score (!)  
+    Geo distance sorting  
+    Fuzzy searches (approximate date, etc) (!)  
+    Asynchronous replication  
+    Atomic, scripted updates (good for counters, etc)  
+    Can maintain automatic "stats groups" (good for debugging)  
+    Still depends very much on only one developer (kimchy).   
+Best used: When you have objects with (flexible) fields, and you need "advanced search" functionality.  
 
 
 ### [MongoDB](https://www.mongodb.org/)
