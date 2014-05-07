@@ -224,7 +224,29 @@ For example: CRM, CMS systems. Master-master replication is an especially intere
 Best used: If you need dynamic queries. If you prefer to define indexes, not map/reduce functions. If you need good performance on a big DB. If you wanted CouchDB, but your data changes too much, filling up disks.  
 For example: For most things that you would do with MySQL or PostgreSQL, but having predefined columns really holds you back.   
 
-* **Couch vs Mongo comments**: Seems that we don't really need the extra processing power that Mongo provides, and master-master DB replication that Couch provides can be really useful. We know Couch already, and like that the views can be constructed to do edits without anything predefined.
+* **Couch vs Mongo comments**: Seems that we don't really need the extra processing power that Mongo provides, and master-master DB replication that Couch provides can be really useful. We know Couch already, and like that the views can be constructed to do edits without anything predefined. Couch also offers views in a way that we can query and spot-check easily and quickly.
+
+###[Apache Cassandra](http://cassandra.apache.org/)
+If scaleability is a concern, options like Cassandra exist (http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis).
+*   Written in: Java
+*   Main point: Store huge datasets in "almost" SQL
+*   License: Apache
+*   Protocol: CQL3 & Thrift
+*   CQL3 is very similar SQL, but with some limitations that come from the scalability (most notably: no JOINs, no aggregate functions.)
+*   CQL3 is now the official interface. Don't look at Thrift, unless you're working on a legacy app. This way, you can live   without understanding ColumnFamilies, SuperColumns, etc.
+*   Querying by key, or key range (secondary indices are also available)
+*   Tunable trade-offs for distribution and replication (N, R, W)
+*   Data can have expiration (set on INSERT).
+*   Writes can be much faster than reads (when reads are disk-bound)
+*   Map/reduce possible with Apache Hadoop
+*   All nodes are similar, as opposed to Hadoop/HBase
+*   Very good and reliable cross-datacenter replication
+*   Distributed counter datatype.
+*   You can write triggers in Java.
+Best used: When you need to store data so huge that it doesn't fit on server, but still want a friendly familiar interface to it.
+For example: Web analytics, to count hits by hour, by browser, by IP, etc. Transaction logging. Data collection from huge sensor arrays.
+* **Cassandra Comments**:  Cassandra in comparison to Couch lacks a lot of features we are used to. It does however have its own qualities, like being "almost" SQL reducing some of the learning curve compared to other options. The real downside I saw while testing out cassandra was that manipulating data and/or attempting to sort data was just not a smooth process.  
+
 
 ### Amazon: Files on EC2 with an S3 back-end
 * Recommended by Ryan
