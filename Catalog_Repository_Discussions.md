@@ -224,7 +224,7 @@ For example: CRM, CMS systems. Master-master replication is an especially intere
 Best used: If you need dynamic queries. If you prefer to define indexes, not map/reduce functions. If you need good performance on a big DB. If you wanted CouchDB, but your data changes too much, filling up disks.  
 For example: For most things that you would do with MySQL or PostgreSQL, but having predefined columns really holds you back.   
 
-* **Couch vs Mongo comments**: Seems that we don't really need the extra processing power that Mongo provides, and master-master DB replication that Couch provides can be really useful. We know Couch already, and like that the views can be constructed to do edits without anything predefined. Couch also offers views in a way that we can query and spot-check easily and quickly.
+* **Couch vs Mongo comments**: Seems that we don't really need the extra processing power that Mongo provides, and master-master DB replication that Couch provides can be really useful. We know Couch already, and like that the views can be constructed to do edits without anything predefined. Couch also offers views in a way that we can query and spot-check easily and quickly. Updating, Data Manipulations, and sorting are all pretty straight forward in Mongo and Couch.
 
 ###[Apache Cassandra](http://cassandra.apache.org/)
 If scaleability is a concern, options like Cassandra exist (http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis).
