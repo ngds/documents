@@ -1,8 +1,10 @@
 # NGDS Software brainstorming
 
-NGDS requires software to support a variety of functions. This document is for brainstorming requirements/use scenarios. The [Enterprise view](#enterprise-view) focuses on domain operations (attempt to be independent of software). The [Functional View](#functional-view) section decomposes the operations into units that can be implemented in software components. For in-depth discussion regarding specific software options, see https://github.com/ngds/documents/blob/master/Catalog_Repository_Discussions.md.
+NGDS requires software to support a variety of functions. This document is for brainstorming requirements/use scenarios. The [Enterprise view](#enterprise-view) focuses on domain operations (attempt to be independent of software). The [Functional View](#functional-view) section decomposes the operations into units that can be implemented in software components. For in-depth discussion regarding specific software options, see https://github.com/ngds/documents/blob/master/Catalog_Repository_Discussions.md. 
 
 NGDS is implementing the US GeoScience Information network framework for scientific data sharing. It is a sub-network focused on content related to geothermal systems, and geothermal energy exploration and development.
+
+The outlines below focus mainly on the harvesting/aggregating node; the idea of a separate node and aggreagtor presists because the aggreagator node must have fairly in-depth metadata management capabilities (including a 'staging' database where standards-adherance can be assessed and metadata can be edited). Nodes are meant as a quite simple and easy 'beginners' management of metadata, files, and web services, where complicated data management structure and capabilites are not desirable. The node can always do more advanced web services managament through GeoServer and data management through a postgreSQL interface like pgAdmin, if desired.
 
 
 ## Enterprise view
@@ -70,6 +72,5 @@ The tools should be easy to use, standards-based, and free-open source. Software
 * Integrate current information exchange (model) management
 * members, editors, owner, public roles
 * groups of members, hierarchical groups
-* access control to collections at member and group level
-
+* access control to collections at member and group level  
 
