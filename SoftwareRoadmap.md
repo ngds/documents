@@ -4,7 +4,7 @@ NGDS requires software to support a variety of functions. This document is for b
 
 NGDS is implementing the US GeoScience Information network framework for scientific data sharing. It is a sub-network focused on content related to geothermal systems, and geothermal energy exploration and development.
 
-The outlines below focus mainly on the harvesting/aggregating node; the idea of a separate node and aggreagtor presists because the aggreagator node must have fairly in-depth metadata management capabilities (including a 'staging' database where standards-adherance can be assessed and metadata can be edited). Nodes are meant as a quite simple and easy 'beginners' management of metadata, files, and web services, where complicated data management structure and capabilites are not desirable. The node can always do more advanced web services managament through GeoServer and data management through a postgreSQL interface like pgAdmin, if desired.
+The outlines below focus mainly on the harvesting/aggregating node; the idea of a separate node and aggregator persists because the aggreagator must have fairly in-depth metadata management capabilities (including a 'staging' database where standards-adherance can be assessed and metadata can be edited). Nodes are meant as a quite simple and easy 'beginners' management of metadata, files, and web services, where complicated data management structure and capabilites are not desirable. The node can always do more advanced web services managament through GeoServer and data management through a postgreSQL interface like pgAdmin, if the user desires.
 
 
 ## Enterprise view
